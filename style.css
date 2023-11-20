@@ -1,0 +1,388 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Heebo', sans-serif;
+}
+
+.container {
+    background-color: #1a1a1a;
+    overflow: hidden;
+}
+
+.allo {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.alloTextContainer {
+    flex: 3;
+    position: relative;
+    z-index: 1;
+}
+
+.alloImgContainer {
+    flex: 3;
+    position: absolute; /* Position absolutely within the .allo container */
+    top: 0;
+    left: 75%; /* Adjust the left position to move the image to the right */
+    max-width: 100%;
+    height: 100%;
+    transform: translateX(-50%); /* Center the image horizontally */
+    z-index: 1;
+    z-index: 2; /* Set a lower z-index for the image container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alloText{
+   color: #333333; 
+   font-size: 33vw;
+   cursor: default;
+   
+   
+}
+
+.alloImg {
+    max-width: 100%;
+    height: 100vh;
+    object-fit: cover; /* Default value for larger screens */
+}
+
+@media screen and (max-width: 1024px) {
+    .alloImgContainer {
+        height: 100vh !important;
+        width: 100vh;
+    }
+
+    .alloImg {
+        object-fit: contain !important;
+        height: 100%;
+        width: auto;
+    }
+}
+
+.nameContainer{
+    height: 100vh;
+    background-color: #B3B9C1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.name{
+    font-size: 15vw;
+    color: #333333;
+    cursor: default;
+    text-align: center;
+    line-height: 1;
+    
+}
+
+.under{
+    font-size: 3vw;
+    color: #333333;
+    cursor: default;
+    text-align: center;
+    line-height: 1
+}
+
+
+.jobTitleContainer{
+    height: 100vh;
+}
+
+.dark{
+    background: url("./images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+.light{
+    background: #B3B9C1 url("./images/background1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.jobTitle{
+    font-size: 10vw;
+    color: #B3B9C1;
+    text-shadow: 10px 10px 10px #333333;
+    line-height: 100vh;
+    
+}
+
+.jobTitle2{
+    font-size: 12vw;
+    color: #333333;;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.7);
+    line-height: 100vh;
+    
+
+}
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    gap: 30vh;
+    padding: 0px 100px;
+
+}
+
+.project:nth-child(2n){
+    flex-direction: row-reverse;
+}
+
+
+.projectTitle{
+    font-size: 10vw;
+    color: #B3B9C1;
+    text-align: center;
+
+}
+
+.projectDesc{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 100px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.project{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.phone{
+    flex: 1;
+    width: 422x;
+    height: 847px;
+    position: relative;
+    
+}
+
+.phoneScreen{
+    width: 386px;
+    height: 815px;
+    position: absolute;
+    top: 16px;
+    left: 18px;
+    border-radius: 40px;
+    overflow: scroll; 
+    
+    scrollbar-width: none;
+
+   
+    -ms-overflow-style: none;
+}
+
+.phoneScreen::-webkit-scrollbar {
+    display: none;
+}
+
+.accueil{
+    width: 100%;
+}
+
+.projectDetail{
+    flex: 1;
+    display: flex;
+    flex-direction: column; 
+    gap: 50px;
+    align-items: center;
+}
+
+.sepaqTitle{
+    font-size: 7vw;
+    color: #B3B9C1;
+
+}
+
+.projectDescription{
+    font-size: 20px;
+    color: #B3B9C1;
+    text-align: justify;
+    line-height: 40px;
+    text-align: center;
+}
+
+.projectButton {
+    position: relative;
+    overflow: hidden;
+}
+
+.projectButton::after {
+    content: "Voir maquette";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: transform 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #B3B9C1;
+    color: #333333;
+}
+
+.projectButton:hover::after {
+    transform: translateX(0);
+}
+
+/* Other styling for the button */
+.projectButton {
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid #B3B9C1;
+    color: #B3B9C1;
+    cursor: pointer;
+}
+
+.laptop{
+    width: 900px;
+    height: 571px;
+    flex: 1;
+    position: relative;
+}
+
+.laptopScreen{
+    width: 695px;
+    height: 437px;
+    position: absolute;
+    top: 30px;
+    left: 102px;
+    overflow: scroll; 
+    
+    scrollbar-width: none;
+
+   
+    -ms-overflow-style: none;
+}
+
+.laptopScreen::-webkit-scrollbar {
+    display: none;
+}
+
+.cssspnql{
+    width: 100%;
+}
+
+
+.phone2{
+    flex: 1;
+    width: 422x;
+    height: 847px;
+    position: relative;
+}
+
+.phoneScreen2{
+    width: 327px;
+    height: 713px;
+    position: absolute;
+    top: 18px;
+    left: 22px;
+    border-radius: 46px;
+    overflow: scroll; 
+    
+    scrollbar-width: none;
+
+   
+    -ms-overflow-style: none;
+}
+
+.phoneScreen::-webkit-scrollbar {
+    display: none;
+}
+
+.logo{
+    width: 100%;
+}
+
+.CVLP{
+    height: 75%;
+}
+
+@media screen and (max-width: 1024px) {
+    .alloImgContainer {
+        /* Adjusted styles for responsive screens */
+        max-width: 80%;
+    }
+
+    .alloImg {
+        /* Adjusted styles for responsive screens */
+        max-width: 100%;
+    }
+}
+
+.contactContainer{
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.CV {
+    max-width: 100%;
+    overflow: hidden; /* Allow the child image to overflow if needed */
+}
+
+.CV img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.CVLP{
+    width: 100%;  /* Set a specific width, adjust as needed */
+    height: auto;  /* Maintain the aspect ratio while resizing */
+}
+
+.contactTitle{
+    font-size: 7vw;
+    color: #B3B9C1;
+    line-height: 15vh;
+}
+
+.jobTitle{
+    text-align: center;
+}
+
+.jobTitle2{
+    text-align: center;
+}
+
+
+@media screen and (max-width:1024px) {
+
+    .projects {
+        padding: 0 30px;
+        text-align: center;
+    }
+
+    .project {
+        flex-direction: column;
+        height: max-content;
+    }
+
+    .project:nth-child(2n) {
+        flex-direction: column;
+    }
+
+   
+}
